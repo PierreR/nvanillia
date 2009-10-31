@@ -14,7 +14,7 @@ export BMOB_DIR=~/project/bmob
 export DJANGO_SETTINGS_MODULE='settings'
 export TERM=xterm-256color
 export MOZILLA_CERTIFICATE_FOLDER=~/.mozilla/firefox/djt0wc2v.default
-
+export TERM=konsole
 
 HISTFILE=~/.histfile
 HISTSIZE=1000
