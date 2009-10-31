@@ -18,6 +18,11 @@ programs
 tmp
 .*
 !.gitignore
+!.vim
+plugin
+autoload
+syntax
+.vim/doc/
 !.vimrc
 !.zshrc
 !.xmonad
