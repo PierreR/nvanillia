@@ -4,7 +4,8 @@ set t_Co=256
 set mouse=a
 set nobackup
 set showcmd
-set hidden "allow buffer to have hidden changed
+set autowrite
+" set hidden "allow buffer to have hidden changed
 set history=100
 set textwidth=120
 set shell=zsh
@@ -43,9 +44,12 @@ filetype plugin indent on
 " Set an orange cursor in Insert mode, and red cursor otherwise.
 " " Works at least for xterm and rxvt terminals
 " " Does not work at least for gnome terminal, konsole, xfce4-terminal
-if &term =~ "konsole"
-	let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
+" IF YOU SET THE TERM ENV TO KONSOLE IT BREAKS THE MOUSE BEHAVIOUR !!
+" if &term =~ "konsole"
+" 	let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+" 	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" endif
 
-"if &term =~ "xterm\\|rxvt|konsole"
+"autocmd Filetype text unmap <Tab>
+autocmd Filetype text map j gj
+autocmd Filetype text map k gk
