@@ -27,3 +27,8 @@ syntax
 !.zshrc
 !.xmonad
 !.Xdefault
+!.kde4
+.kde4/share
+.kde4/socket*
+tmp*
+cache*
