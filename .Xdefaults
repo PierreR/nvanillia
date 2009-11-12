@@ -1,0 +1,49 @@
+Xft.dpi:       96
+Xft.antialias: 1
+Xft.hinting:   1
+Xft.hintstyle: hintfull
+Xft.rgba:      rgb
+
+!URxvt*transparent:true
+!urxvt*tint : black
+!URxvt*shading: 125
+!URxvt*inheritPixmap:true
+URxvt*font: xft:Monospace-11
+urxvt.background: #303030
+URxvt*foreground : #DCDCCD
+! This will only works with a xcompmgr
+!URxvt*background: rgba:0000/0000/0000/8000
+!urxvt*depth: 24
+URxvt*scrollBar: false
+
+URxvt.keysym.C-Up:    \033[1;5A
+URxvt.keysym.C-Down:  \033[1;5B
+URxvt.keysym.C-Left:  \033[1;5D
+URxvt.keysym.C-Right: \033[1;5C
+
+URxvt.keysym.M-Down:  \033[1;3B
+URxvt.keysym.M-Up:    \033[1;3A
+URxvt.keysym.M-Left:  \033[1;3D
+URxvt.keysym.M-Right: \033[1;3C
+
+urxvt.urlLauncher: uzbl
+!Xcursor.theme:Vanilla-DMZ-AA
+
+Xcursor.theme: whiteglass
+Xcursor.size: 16
+URxvt.perl-ext-common: default,-selection-popup,-option-popup
+
+!red
+*color1: #DFB5B5
+*color9: rgb:b0/70/50
+!rgb:9e/18/28
+
+!blue
+*color4: rgb:32/4c/80
+*color12: rgb:98/af/d9
+
+dzen2.font: xft:Monospace-10
+dzen2.background: black
+dzen2.foreground: #22EE11
+
+vim.FontBackend: xft
