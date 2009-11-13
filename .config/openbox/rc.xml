@@ -112,15 +112,12 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-  <number>4</number>
+  <number>1</number>
   <firstdesk>1</firstdesk>
   <names>
-    <name>web</name>
     <name>work</name>
-    <name>term</name>
-    <name>mail</name>
   </names>
-  <popupTime>875</popupTime>
+  <popupTime>0</popupTime>
   <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
 </desktops>
@@ -180,60 +177,21 @@
     <action name="execute"><execute>gmrun</execute></action>
   </keybind>
   <!-- Keybindings for desktop switching -->
-  <keybind key="C-A-Left">
-    <action name="DesktopLeft"><dialog>no</dialog><wrap>no</wrap></action>
-  </keybind>
-  <keybind key="C-A-Right">
-    <action name="DesktopRight"><dialog>no</dialog><wrap>no</wrap></action>
-  </keybind>
-  <keybind key="C-A-Up">
-    <action name="DesktopUp"><dialog>no</dialog><wrap>no</wrap></action>
-  </keybind>
-  <keybind key="C-A-Down">
-    <action name="DesktopDown"><dialog>no</dialog><wrap>no</wrap></action>
-  </keybind>
-  <keybind key="S-F1">
-	  <action name="SendToDesktop"><desktop>1</desktop><follow>yes</follow></action>
-  </keybind>
-  <keybind key="S-F2">
-	  <action name="SendToDesktop"><desktop>2</desktop><follow>yes</follow></action>
-  </keybind>
-  <keybind key="S-F3">
-	  <action name="SendToDesktop"><desktop>3</desktop><follow>yes</follow></action>
-  </keybind>
-  <keybind key="S-F4">
-	  <action name="SendToDesktop"><desktop>4</desktop><follow>yes</follow></action>
-  </keybind>
-  <keybind key="F1">
-    <action name="Desktop"><desktop>1</desktop></action>
-  </keybind>
-  <keybind key="F2">
-    <action name="Desktop"><desktop>2</desktop></action>
-  </keybind>
-  <keybind key="F3">
-    <action name="Desktop"><desktop>3</desktop></action>
-  </keybind>
-    <keybind key="F4">
-    <action name="Desktop"><desktop>4</desktop></action>
-  </keybind>
   <keybind key="F5">
-    <action name="execute"><execute>/usr/local/bin/styler-simple</execute></action>
+    <action name="execute"><execute>__tile_simple</action>
   </keybind>
   <keybind key="W-d">
     <action name="ToggleShowDesktop"/>
   </keybind>
 
   <!-- Keybindings for windows -->
-  <keybind key="A-F4">
+  <keybind key="W-w">
     <action name="Close"/>
   </keybind>
-  <keybind key="A-Escape">
+  <keybind key="W-Escape">
     <action name="Lower"/>
     <action name="FocusToBottom"/>
     <action name="Unfocus"/>
-  </keybind>
-  <keybind key="A-space">
-    <action name="ShowMenu"><menu>client-menu</menu></action>
   </keybind>
   <keybind key="C-W-Left">
     <action name="GrowToEdgeWest"/>
@@ -251,25 +209,8 @@
   <keybind key="W-Tab">
     <action name="NextWindow"/>
   </keybind>
-  <keybind key="A-S-Tab">
-    <action name="PreviousWindow"/>
-  </keybind>
-  <keybind key="C-A-Tab">
-    <action name="NextWindow">
-      <panels>yes</panels><desktop>yes</desktop>
-    </action>
-  </keybind>
 
   <!-- Keybindings for running applications -->
-  <keybind key="W-e">
-    <action name="Execute">
-      <startupnotify>
-        <enabled>true</enabled>
-        <name>Konqueror</name>
-      </startupnotify>
-      <command>kfmclient openProfile filemanagement</command>
-    </action>
-  </keybind>
 </keyboard>
 
 <mouse>
@@ -283,49 +224,30 @@
        Set this to 0 to disable warping -->
 
   <context name="Frame">
-    <mousebind button="A-Left" action="Press">
+    <mousebind button="W-Left" action="Press">
       <action name="Focus"/>
       <action name="Raise"/>
     </mousebind>
-    <mousebind button="A-Left" action="Click">
+    <mousebind button="W-Left" action="Click">
       <action name="Unshade"/>
     </mousebind>
-    <mousebind button="A-Left" action="Drag">
+    <mousebind button="W-Left" action="Drag">
       <action name="Move"/>
     </mousebind>
 
-    <mousebind button="A-Right" action="Press">
+    <mousebind button="W-Right" action="Press">
       <action name="Focus"/>
       <action name="Raise"/>
       <action name="Unshade"/>
     </mousebind>
-    <mousebind button="A-Right" action="Drag">
+    <mousebind button="W-Right" action="Drag">
       <action name="Resize"/>
     </mousebind> 
 
-    <mousebind button="A-Middle" action="Press">
+    <mousebind button="W-Middle" action="Press">
       <action name="Lower"/>
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
-    </mousebind>
-
-    <mousebind button="A-Up" action="Click">
-      <action name="DesktopPrevious"/>
-    </mousebind>
-    <mousebind button="A-Down" action="Click">
-      <action name="DesktopNext"/>
-    </mousebind>
-    <!-- <mousebind button="C-A-Up" action="Click"> -->
-    <!--   <action name="DesktopPrevious"/> -->
-    <!-- </mousebind> -->
-    <!-- <mousebind button="C-A-Down" action="Click"> -->
-    <!--   <action name="DesktopNext"/> -->
-    <!-- </mousebind> -->
-    <mousebind button="A-S-Up" action="Click">
-      <action name="SendToDesktopPrevious"/>
-    </mousebind>
-    <mousebind button="A-S-Down" action="Click">
-      <action name="SendToDesktopNext"/>
     </mousebind>
   </context>
 
@@ -339,24 +261,13 @@
     </mousebind>
     <mousebind button="Left" action="DoubleClick">
       <action name="ToggleMaximizeFull"/>
-    </mousebind>
+    </mousebind>0
 
     <mousebind button="Middle" action="Press">
       <action name="Lower"/>
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
     </mousebind>
-
-    <!-- <mousebind button="Up" action="Click"> -->
-    <!--   <action name="Shade"/> -->
-    <!--   <action name="FocusToBottom"/> -->
-    <!--   <action name="Unfocus"/> -->
-    <!--   <action name="Lower"/> -->
-    <!-- </mousebind> -->
-    <!-- <mousebind button="Down" action="Click"> -->
-    <!--   <action name="Unshade"/> -->
-    <!--   <action name="Raise"/> -->
-    <!-- </mousebind> -->
 
     <mousebind button="Right" action="Press">
       <action name="Focus"/>
@@ -562,23 +473,6 @@
     <mousebind button="Up" action="Click">
       <action name="DesktopPrevious"/>
     </mousebind>
-    <!-- <mousebind button="Down" action="Click"> -->
-    <!--   <action name="DesktopNext"/> -->
-    <!-- </mousebind> -->
-
-    <!-- <mousebind button="A-Up" action="Click"> -->
-    <!--   <action name="DesktopPrevious"/> -->
-    <!-- </mousebind> -->
-    <!-- <mousebind button="A-Down" action="Click"> -->
-    <!--   <action name="DesktopNext"/> -->
-    <!-- </mousebind> -->
-    <!-- <mousebind button="C-A-Up" action="Click"> -->
-    <!--   <action name="DesktopPrevious"/> -->
-    <!-- </mousebind> -->
-    <!-- <mousebind button="C-A-Down" action="Click"> -->
-    <!--   <action name="DesktopNext"/> -->
-    <!-- </mousebind> -->
-
     <mousebind button="Left" action="Press">
       <action name="Focus"/>
       <action name="Raise"/>
@@ -596,21 +490,6 @@
     </mousebind> 
     <mousebind button="Right" action="Press">
       <action name="ShowMenu"><menu>root-menu</menu></action>
-    </mousebind>
-  </context>
-
-  <context name="MoveResize">
-    <mousebind button="Up" action="Click">
-      <action name="DesktopPrevious"/>
-    </mousebind>
-    <mousebind button="Down" action="Click">
-      <action name="DesktopNext"/>
-    </mousebind>
-    <mousebind button="A-Up" action="Click">
-      <action name="DesktopPrevious"/>
-    </mousebind>
-    <mousebind button="A-Down" action="Click">
-      <action name="DesktopNext"/>
     </mousebind>
   </context>
 </mouse>
