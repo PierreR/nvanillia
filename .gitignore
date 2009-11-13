@@ -14,6 +14,11 @@ manage
 music
 doc
 bin
+vlc
+gtk
+*Trolltech*
+*gnome*
+*gecko*
 Desktop
 dwhelper
 proto
@@ -34,6 +39,7 @@ syntax
 !.xmonad
 !.Xdefaults
 !.kde4
+kde.*
 .kde4/share
 .kde4/socket*
 tmp*
