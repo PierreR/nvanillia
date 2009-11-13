@@ -10,9 +10,13 @@ test.*
 *backup*
 *i386*
 downloads
+manage
+music
+doc
 bin
 Desktop
 dwhelper
+proto
 sandbox
 programs
 tmp
@@ -26,7 +30,7 @@ syntax
 !.vimrc
 !.zshrc
 !.xmonad
-!.Xdefault
+!.Xdefaults
 !.kde4
 .kde4/share
 .kde4/socket*

@@ -14,6 +14,7 @@ export BMOB_DIR=~/project/bmob
 export DJANGO_SETTINGS_MODULE='settings'
 export TERM=xterm-256color
 export MOZILLA_CERTIFICATE_FOLDER=~/.mozilla/firefox/djt0wc2v.default
+export JDK_HOME=/opt/java
 # export TERM=konsole
 
 HISTFILE=~/.histfile
@@ -43,7 +44,7 @@ alias netbeans='/usr/local/netbeans-6.5/bin/netbeans --laf com.sun.java.swing.pl
 alias __etags="cd_django;find . -type f -iname '*.py' | etags.emacs --lang=python -"
 #alias __ie_6='vncviewer ci10560'
 alias __reset_all='__reset_ articles works sites news projects ticker'
-alias __vpn='cd ~/documents/cirb/vpn/Pierre_Radermecker;sudo openvpn --config Pierre_Radermecker.ovpn'
+alias __vpn='cd ~/documents/cirb/manage/vpn;sudo openvpn --config Pierre_Radermecker.ovpn'
 alias __i_='sudo pacman -S $1'
 alias __u='sudo pacman -Suy'
 alias __reload_zsh='source ~/.zshrc'
