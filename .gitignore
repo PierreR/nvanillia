@@ -23,6 +23,8 @@ tmp
 .*
 !.gitignore
 !.vim
+!.local
+!.config
 plugin
 autoload
 syntax
@@ -36,3 +38,4 @@ syntax
 .kde4/socket*
 tmp*
 cache*
+!.fonts\.conf
