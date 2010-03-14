@@ -10,6 +10,7 @@ test.*
 *backup*
 *i386*
 downloads
+res
 manage
 music
 doc
@@ -29,7 +30,6 @@ tmp
 !.gitignore
 !.vim
 !.local
-!.config
 plugin
 autoload
 syntax
